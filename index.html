@@ -1,307 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Zoredah DataWorks | Identity, access and IT advisory</title>
-<meta name="description" content="Identity and access management, IT advisory, continuity planning and training for NGOs and growing organisations. Based in Abuja, working globally.">
+<title>Zoredah DataWorks | Identity, access &amp; IT advisory for NGOs</title>
+<meta name="description" content="Identity and access management, Microsoft 365 security, continuity planning and IT training for NGOs and growing organisations. Led by Bisi Teru, 23 years in IT. Abuja, working globally.">
+<link rel="canonical" href="https://zoredah.com/">
+<meta name="theme-color" content="#003466">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zoredah DataWorks">
+<meta property="og:title" content="Zoredah DataWorks | Identity, access & IT advisory">
+<meta property="og:description" content="The right people. The right access. Nothing more. IT advisory for NGOs and growing organisations, led by Bisi Teru.">
+<meta property="og:url" content="https://zoredah.com/">
+<meta property="og:image" content="https://zoredah.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#03356A;--ink:#0B1B2E;--orange:#D35400;--paper:#F4F1EA;--line:#d8d2c4;--muted:#5a6577}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.55}
-img{display:block;max-width:100%}
-.mono{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-h1,h2,h3{font-family:'Syne',sans-serif;font-weight:800;line-height:.98;letter-spacing:-.02em}
-a{color:inherit}
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="preload" as="image" href="/images/bisi-portrait.jpg">
 
-/* navigation */
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;border-bottom:1px solid var(--line)}
-.brand{display:flex;gap:10px;align-items:center;font-family:'Syne',sans-serif;font-weight:600;text-decoration:none}
-.mark{display:grid;grid-template-columns:repeat(4,7px);grid-template-rows:repeat(4,7px)}
-.mark i{background:var(--navy)}
-.mark i.o{background:var(--orange)}
-nav ul{display:flex;gap:34px;list-style:none}
-nav ul a{text-decoration:none}
-nav ul a:hover{color:var(--orange)}
-.cta{background:var(--ink);color:#fff;padding:11px 18px;text-decoration:none}
-.cta:hover{background:var(--orange)}
-
-/* hero: deliberately asymmetric */
-.hero{display:grid;grid-template-columns:7fr 4fr;min-height:82vh;border-bottom:1px solid var(--line)}
-.hero-l{padding:9vh 5vw 6vh;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
-.hero h1{font-size:clamp(46px,7.4vw,112px);color:var(--navy)}
-.hero h1 em{font-style:normal;color:var(--orange)}
-.hero p{max-width:30em;margin-top:28px;font-size:19px}
-.hero-r{background:var(--navy);position:relative;overflow:hidden;color:#fff;padding:5vh 3vw}
-.blocks{position:absolute;right:0;bottom:0;display:grid;grid-template-columns:repeat(5,9vw);grid-auto-rows:9vw}
-.blocks b{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.05);animation:rise .6s both}
-.blocks b.o{background:var(--orange)}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}}
-.term{font-family:'IBM Plex Mono',monospace;font-size:13px;opacity:.85;line-height:1.9;position:relative;z-index:1}
-.term span{color:#ffb27a}
-
-/* proof strip */
-.proof{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.4fr;border-bottom:1px solid var(--line)}
-.proof div{padding:34px 5vw 34px 2.4vw;border-right:1px solid var(--line)}
-.proof div:first-child{padding-left:5vw}
-.proof div:last-child{border-right:0}
-.big{font-family:'Syne',sans-serif;font-size:64px;font-weight:800;color:var(--navy);line-height:1}
-
-/* services: an editorial list, not a row of cards */
-.svc{padding:14vh 5vw 10vh;display:grid;grid-template-columns:1fr 2fr;gap:6vw}
-.svc h2{font-size:52px;position:sticky;top:30px;align-self:start}
-.row{display:grid;grid-template-columns:60px 1fr 1.1fr;gap:24px;padding:30px 0;border-top:1px solid var(--ink)}
-.row:last-child{border-bottom:1px solid var(--ink)}
-.row h3{font-size:28px;transition:color .2s}
-.row .n{color:var(--orange)}
-.row:hover h3{color:var(--orange)}
-
-/* about, with portrait */
-.about{display:grid;grid-template-columns:5fr 6fr;background:var(--ink);color:var(--paper)}
-.about figure{position:relative;min-height:560px;overflow:hidden}
-.about figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.about figure::after{content:'';position:absolute;right:0;bottom:0;width:22%;aspect-ratio:1;background:var(--orange)}
-.about-t{padding:12vh 6vw 10vh 5vw;display:flex;flex-direction:column;justify-content:center}
-.about blockquote{font-family:'Syne',sans-serif;font-size:clamp(28px,3.1vw,44px);line-height:1.12;font-weight:600}
-.about p.body{margin-top:30px;max-width:34em;color:#c9cfd8}
-
-/* the fire: case story */
-.fire{padding:14vh 5vw 12vh;border-bottom:1px solid var(--line)}
-.fire-head{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:end;margin-bottom:8vh}
-.fire h2{font-size:clamp(44px,6.5vw,96px);color:var(--navy)}
-.fire-head p{font-size:19px;max-width:30em}
-.fire-grid{display:grid;grid-template-columns:3fr 2fr 3fr;gap:14px;align-items:start}
-.fire-grid img{width:100%;height:100%;object-fit:cover}
-.fire-grid figure:nth-child(1){aspect-ratio:4/3}
-.fire-grid figure:nth-child(2){aspect-ratio:3/4;margin-top:9vh}
-.fire-grid figure:nth-child(3){aspect-ratio:4/3;margin-top:4vh}
-.fire-grid figcaption{margin-top:10px;color:var(--muted)}
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:10vh;border-top:2px solid var(--ink)}
-.timeline div{padding:22px 24px 0 0}
-.timeline .when{color:var(--orange)}
-.timeline h3{font-size:22px;margin:10px 0 8px}
-.timeline p{font-size:15px;color:#2a3546}
-.lesson{margin-top:10vh;display:grid;grid-template-columns:1fr 2fr;gap:6vw}
-.lesson blockquote{font-family:'Syne',sans-serif;font-weight:600;font-size:clamp(24px,2.6vw,36px);line-height:1.15;border-left:6px solid var(--orange);padding-left:26px}
-
-/* global strip over the Dakar photo */
-.global{position:relative;min-height:78vh;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
-.global img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%}
-.global::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,26,56,0) 30%,rgba(3,26,56,.82) 75%);z-index:1}
-.global-t{position:relative;z-index:2;margin-left:auto;max-width:520px;padding:0 5vw 10vh}
-.global h2{font-size:clamp(36px,4.4vw,64px)}
-.global p{margin-top:20px;font-size:18px}
-
-/* field strip */
-.field{padding:12vh 5vw;display:grid;grid-template-columns:1fr 1.4fr 1.1fr;gap:14px;align-items:end}
-.field .intro{align-self:start;padding-right:3vw}
-.field .intro h2{font-size:40px;color:var(--navy);margin-top:14px}
-.field .intro p{margin-top:18px;color:#2a3546}
-.field figure img{width:100%;object-fit:cover}
-.field figure:nth-child(2) img{aspect-ratio:16/9}
-.field figure:nth-child(3) img{aspect-ratio:1}
-.field figcaption{margin-top:10px;color:var(--muted)}
-
-/* training */
-.train{display:grid;grid-template-columns:6fr 5fr;border-top:1px solid var(--line)}
-.train figure{min-height:520px;position:relative}
-.train figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 15%}
-.train-t{padding:12vh 5vw 10vh 5vw;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
-.train h2{font-size:clamp(38px,4.4vw,64px);color:var(--navy);margin-top:16px}
-.list{list-style:none;border-left:3px solid var(--orange);padding-left:22px}
-.list li{padding:8px 0}
-.cert{display:flex;gap:18px;align-items:center}
-.cert img{width:120px;height:88px;object-fit:cover}
-.cert p{font-size:15px;color:#2a3546;max-width:24em}
-
-/* closing call to action */
-.end{background:var(--orange);color:#fff;padding:12vh 5vw 8vh}
-.end h2{font-size:clamp(44px,8vw,128px);max-width:11ch;margin-top:16px}
-.end a.btn{display:inline-block;margin-top:40px;background:var(--ink);color:#fff;padding:18px 28px;text-decoration:none;font-family:'IBM Plex Mono',monospace}
-.end a.btn:hover{background:#000}
-footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:26px 5vw;font-size:14px}
-
-@media (max-width:900px){
-  .hero,.svc,.about,.train,.proof,.fire-head,.lesson,.field{grid-template-columns:1fr}
-  .hero-r{min-height:320px}
-  .blocks{grid-template-columns:repeat(5,18vw);grid-auto-rows:18vw}
-  nav ul{display:none}
-  .row{grid-template-columns:40px 1fr}
-  .row p{grid-column:2}
-  .svc h2{position:static}
-  .proof div{border-right:0;border-bottom:1px solid var(--line);padding-left:5vw}
-  .about figure{min-height:420px}
-  .fire-grid{grid-template-columns:1fr 1fr}
-  .fire-grid figure:nth-child(1){grid-column:1/-1}
-  .fire-grid figure:nth-child(2),.fire-grid figure:nth-child(3){margin-top:0}
-  .timeline{grid-template-columns:1fr 1fr}
-  .global::before{background:linear-gradient(180deg,rgba(3,26,56,0) 20%,rgba(3,26,56,.85) 70%)}
-  .train figure{min-height:300px}
-}
-@media (prefers-reduced-motion:reduce){.blocks b{animation:none}}
-</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Zoredah DataWorks Limited","url":"https://zoredah.com/","logo":"https://zoredah.com/brand/logo-vertical.svg","image":"https://zoredah.com/images/og-image.jpg","email":"info@zoredah.com","description":"Identity and access management, IT advisory, continuity planning and training for NGOs and growing organisations.","address":{"@type":"PostalAddress","addressLocality":"Abuja","addressCountry":"NG"},"areaServed":"Worldwide","founder":{"@type":"Person","name":"Bisi Teru","jobTitle":"Principal Consultant"}}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
-  <a class="brand" href="#">
-    <div class="mark" aria-hidden="true">
-      <i style="grid-area:1/2"></i><i style="grid-area:1/3"></i><i style="grid-area:2/2"></i>
-      <i style="grid-area:3/1"></i><i style="grid-area:3/2"></i>
-      <i class="o" style="grid-area:3/3"></i><i class="o" style="grid-area:3/4"></i>
-      <i class="o" style="grid-area:4/3"></i><i class="o" style="grid-area:4/4"></i>
-    </div>
-    Zoredah DataWorks
-  </a>
-  <ul>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#story">Track record</a></li>
-    <li><a href="#training">Training</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-  <a class="cta" href="#contact">Book a call</a>
-</nav>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="logo" href="/" aria-label="Zoredah Dataworks home">
+      <img src="/brand/logo-horizontal.svg" alt="Zoredah Dataworks" width="333" height="46">
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#track-record">Track record</a>
+      <a href="#training">Training</a>
+      <a href="#about">About</a>
+      <a class="btn btn-primary" href="#contact">Book a consultation</a>
+    </nav>
+  </div>
+</header>
 
+<main id="main">
+
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-l">
-    <span class="mono">Identity &amp; access · IT advisory · Abuja, working globally</span>
+  <div class="wrap hero-grid">
     <div>
-      <h1>The right people.<br>The right access.<br><em>Nothing more.</em></h1>
-      <p>I help NGOs and growing organisations take control of who can reach what, so audits pass, staff leave cleanly, and donors trust your systems as much as your mission.</p>
+      <span class="eyebrow">Identity &amp; access · IT advisory</span>
+      <h1>The right people.<br>The right access.<br><span class="accent">Nothing more.</span></h1>
+      <p class="lede">I help NGOs and growing organisations take control of who can reach what, so audits pass, staff leave cleanly, and donors trust your systems as much as your mission.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Book a free consultation <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#services">See services</a>
+      </div>
+      <div class="hero-meta">
+        <span><strong>Bisi Teru</strong>, Principal Consultant</span>
+        <span>Abuja, Nigeria · working globally</span>
+      </div>
     </div>
-    <span class="mono">Bisi Teru, Principal Consultant</span>
-  </div>
-  <div class="hero-r">
-    <div class="term">
-      &gt; review access --org yours<br>
-      &gt; 214 accounts found<br>
-      &gt; 37 belong to former staff <span>!</span><br>
-      &gt; 12 hold admin rights <span>!</span><br>
-      &gt; fix it with someone who has done this before_
+
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <img src="/images/bisi-portrait.jpg" alt="Bisi Teru, founder of Zoredah DataWorks" width="1200" height="1148" fetchpriority="high">
+      </div>
+      <div class="console" aria-label="Example findings from an access review">
+        <div class="bar"><span>Access review</span><span>example</span></div>
+        &gt; accounts found ......... 214<br>
+        &gt; former staff, active .. <span class="warn">37</span><br>
+        &gt; admin rights .......... <span class="warn">12</span><br>
+        &gt; MFA enforced .......... <span class="warn">41%</span><br>
+        &gt; plan delivered ........ <span class="ok">✓</span>
+      </div>
     </div>
-    <div class="blocks" aria-hidden="true">
-      <b></b><b style="animation-delay:.1s"></b><b></b><b style="animation-delay:.2s"></b><b></b>
-      <b></b><b style="animation-delay:.3s"></b><b class="o" style="animation-delay:.5s"></b><b class="o" style="animation-delay:.6s"></b><b></b>
-      <b style="animation-delay:.4s"></b><b></b><b class="o" style="animation-delay:.7s"></b><b class="o" style="animation-delay:.8s"></b><b></b>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="At a glance">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><div class="num">23<sup>yrs</sup></div><p>in IT, from freelance support in 2003 to enterprise identity work</p></div>
+    <div class="stat reveal"><div class="num">13<sup>+</sup></div><p>years running ICT inside an international NGO across Nigeria</p></div>
+    <div class="stat reveal"><div class="num">5</div><p>roles held: technician, network admin, sysadmin, ICT manager, IAM analyst</p></div>
+    <div class="stat reveal"><div class="num">1</div><p>server room fire, and staff still online by Monday morning</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Services</span>
+        <h2>Fixed scope. Clear price.<br>Real results.</h2>
+      </div>
+      <p class="lede">Each engagement has a defined outcome and a fixed fee, so you know exactly what you're getting before we start.</p>
+    </div>
+
+    <div class="svc-list">
+      <div class="svc reveal"><span class="n">01</span><h3>Access review</h3><p>A full audit of who holds which accounts and permissions, with a ranked list of risks and a plan you can act on.<span class="tag">Typically 1–2 weeks</span></p><span class="blk" aria-hidden="true"></span></div>
+      <div class="svc reveal"><span class="n">02</span><h3>Joiner–mover–leaver setup</h3><p>Onboarding and offboarding that actually works, so access starts on day one and ends on the last day.<span class="tag">Process, tooling &amp; checklists</span></p><span class="blk" aria-hidden="true"></span></div>
+      <div class="svc reveal"><span class="n">03</span><h3>Microsoft 365 hardening</h3><p>MFA, conditional access, admin roles and sharing settings, configured properly and documented for your team.<span class="tag">Configuration &amp; handover</span></p><span class="blk" aria-hidden="true"></span></div>
+      <div class="svc reveal"><span class="n">04</span><h3>Continuity &amp; recovery planning</h3><p>Backups, off-site copies and a written plan your team can follow when the worst happens, even if you can't be there.<span class="tag">Plan, test &amp; train</span></p><span class="blk" aria-hidden="true"></span></div>
+      <div class="svc reveal"><span class="n">05</span><h3>IT advisory</h3><p>A senior voice for leadership on policy, donor and audit readiness, and vendor decisions, without a full-time hire.<span class="tag">Monthly or per project</span></p><span class="blk" aria-hidden="true"></span></div>
+    </div>
+
+    <div class="process">
+      <div class="step reveal"><span class="mono">Step 01</span><h3>A 30-minute conversation</h3><p>Free, with no obligation. You describe the problem; I ask the questions an auditor would.</p></div>
+      <div class="step reveal"><span class="mono">Step 02</span><h3>A written scope &amp; fixed fee</h3><p>Within a few days you receive what I'll do, what you'll get and what it costs. No surprises later.</p></div>
+      <div class="step reveal"><span class="mono">Step 03</span><h3>Delivery &amp; handover</h3><p>The work is done, documented and explained, so your team can carry it forward with confidence.</p></div>
     </div>
   </div>
 </section>
 
-<section class="proof">
-  <div>
-    <span class="mono">Since 2003</span>
-    <p style="margin-top:10px;max-width:24em">Two decades in IT, from freelance support to running ICT for an international NGO across Nigeria, field sites included.</p>
-  </div>
-  <div><div class="big">23</div><span class="mono">years in IT</span></div>
-  <div><div class="big">13</div><span class="mono">years inside an INGO</span></div>
-  <div>
-    <span class="mono">Roles held</span>
-    <p style="margin-top:10px">Technician · Network admin · ICT manager · Sysadmin · IAM analyst</p>
-  </div>
-</section>
-
-<section class="svc" id="services">
-  <h2>Fixed scope.<br>Clear price.<br>Real results.</h2>
-  <div>
-    <div class="row"><span class="mono n">01</span><h3>Access review</h3><p>A full audit of who holds which accounts and permissions, with a ranked list of risks and a plan you can act on.</p></div>
-    <div class="row"><span class="mono n">02</span><h3>Joiner–mover–leaver setup</h3><p>Onboarding and offboarding that actually works, so access starts on day one and ends on the last day.</p></div>
-    <div class="row"><span class="mono n">03</span><h3>Microsoft 365 hardening</h3><p>MFA, conditional access, admin roles and sharing settings, configured properly and documented.</p></div>
-    <div class="row"><span class="mono n">04</span><h3>Continuity &amp; recovery planning</h3><p>Backups, off-site copies and a written plan your team can follow when the worst happens, even if you can't be there.</p></div>
-    <div class="row"><span class="mono n">05</span><h3>IT advisory</h3><p>A senior voice for leadership: policies, donor and audit readiness, and vendor decisions, without a full-time hire.</p></div>
-  </div>
-</section>
-
-<section class="fire" id="story">
-  <div class="fire-head">
-    <div>
-      <span class="mono" style="color:var(--orange)">Track record · November 2014</span>
-      <h2 style="margin-top:16px">The night the server room burned.</h2>
+<!-- FIRE STORY -->
+<section class="section story" id="track-record">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Track record · November 2014</span>
+        <h2>The night the server room burned.</h2>
+      </div>
+      <p class="lede">I was at an ICT conference in the United States when the call came in the early hours: fire had gutted the server room at the international NGO where I ran IT, back home in Nigeria. Staff were due in on Monday.</p>
     </div>
-    <p>I was at an ICT conference in the United States when the call came in the early hours: a fire had gutted the server room at the international NGO where I ran IT, back home in Nigeria. Staff were due in on Monday.</p>
-  </div>
 
-  <div class="fire-grid">
-    <figure><img src="images/fire-switches.jpg" alt="Network switches and wireless access points damaged by fire and covered in soot" loading="lazy"><figcaption class="mono">Switches and access points, after the fire</figcaption></figure>
-    <figure><img src="images/fire-doorway.jpg" alt="Doorway into the fire-damaged IT office" loading="lazy"><figcaption class="mono">The IT office door</figcaption></figure>
-    <figure><img src="images/fire-laptops.jpg" alt="Laptops on a desk covered in ash and debris" loading="lazy"><figcaption class="mono">Workstations under ash</figcaption></figure>
-  </div>
+    <div class="fire-grid">
+      <figure class="reveal"><div class="ph"><img src="/images/fire-switches.jpg" alt="Network switches and wireless access points damaged by fire" width="1400" height="1050" loading="lazy"></div><figcaption>Switches and access points, after the fire</figcaption></figure>
+      <figure class="reveal"><div class="ph"><img src="/images/fire-doorway.jpg" alt="Doorway into the fire-damaged IT office" width="900" height="1200" loading="lazy"></div><figcaption>The IT office door</figcaption></figure>
+      <figure class="reveal"><div class="ph"><img src="/images/fire-laptops.jpg" alt="Laptops on a desk covered in ash and debris" width="1400" height="1050" loading="lazy"></div><figcaption>Workstations under ash</figcaption></figure>
+    </div>
 
-  <div class="timeline">
-    <div><span class="mono when">Saturday, early hours</span><h3>The call</h3><p>Thousands of miles away, with only a phone line and a team of non-technical colleagues on site.</p></div>
-    <div><span class="mono when">Triage</span><h3>What's still alive?</h3><p>I walked them through checking every device. Most were gone, but one of the main switches could be cleaned up and saved.</p></div>
-    <div><span class="mono when">Rebuild</span><h3>Back online, by phone</h3><p>Step by step, we set up a replacement router, moved the cabling to the surviving switch and brought the building's access points back, with makeshift power in place.</p></div>
-    <div><span class="mono when">Monday morning</span><h3>Business as usual</h3><p>Staff arrived to working internet, email on Microsoft 365 and their files. The file server came back up, and our off-site backup disks were safe.</p></div>
-  </div>
+    <div class="timeline">
+      <div class="tl reveal"><span class="when">Saturday, early hours</span><h3>The call</h3><p>Thousands of miles away, with a phone line and a team of non-technical colleagues on site.</p></div>
+      <div class="tl reveal"><span class="when">Triage</span><h3>What's still alive?</h3><p>I walked them through checking every device. Most were gone, but one of the main switches could be cleaned up and saved.</p></div>
+      <div class="tl reveal"><span class="when">Rebuild</span><h3>Back online, by phone</h3><p>Step by step we set up a replacement router, moved the cabling to the surviving switch and brought the building's access points back, on makeshift power.</p></div>
+      <div class="tl reveal"><span class="when">Monday morning</span><h3>Business as usual</h3><p>Staff arrived to working internet, Microsoft 365 email and their files. The file server came back up, and our off-site backups were safe.</p></div>
+    </div>
 
-  <div class="lesson">
-    <span class="mono">What it taught me</span>
-    <blockquote>Disasters don't wait until you're in the office. The work you did months earlier — off-site backups, cloud email, a team that can follow instructions calmly — is what saves you.</blockquote>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <figure><img src="images/bisi-portrait.jpg" alt="Portrait of Bisi Teru, founder of Zoredah DataWorks"></figure>
-  <div class="about-t">
-    <span class="mono" style="color:#ffb27a;margin-bottom:26px">About</span>
-    <blockquote>I've spent my career keeping systems running in places where things go wrong: field offices, power cuts, a server room on fire.</blockquote>
-    <p class="body">I'm Bisi Teru. I started in IT in 2003 as a freelancer, then spent thirteen years at an international NGO, rising from support technician to ICT manager and identity &amp; access analyst. Zoredah DataWorks is how I now bring that experience to organisations that need a senior hand without a full-time hire.</p>
-    <p class="mono" style="margin-top:34px;opacity:.7">Bisi Teru, founder</p>
+    <div class="lesson reveal">
+      <span class="eyebrow">What it taught me</span>
+      <blockquote>Disasters don't wait until you're in the office. The work done months earlier — <em>off-site backups, cloud email, a team that can follow instructions calmly</em> — is what saves you.</blockquote>
+    </div>
   </div>
 </section>
 
-<section class="global">
-  <img src="images/dakar.jpg" alt="Bisi Teru by the sea in Dakar, Senegal, during an ICT4D conference" loading="lazy">
-  <div class="global-t">
-    <span class="mono" style="color:#ffb27a">Dakar · Baltimore · Abuja</span>
-    <h2 style="margin-top:14px">Rooted in Nigeria. Comfortable anywhere.</h2>
-    <p>From ICT4D gatherings in Senegal to conferences in the United States, I bring global practice back to local teams, and local reality to global standards.</p>
+<!-- GLOBAL -->
+<section class="global" aria-label="Working globally">
+  <img src="/images/dakar.jpg" alt="Bisi Teru by the sea in Dakar, Senegal, during an ICT4D conference" width="2000" height="1315" loading="lazy">
+  <div class="wrap">
+    <div class="global-t reveal">
+      <span class="eyebrow">Dakar · Baltimore · Abuja</span>
+      <h2>Rooted in Nigeria. Comfortable anywhere.</h2>
+      <p>From ICT4D gatherings in Senegal to conferences in the United States, I bring global practice back to local teams, and local reality to global standards.</p>
+    </div>
   </div>
 </section>
 
-<section class="field">
-  <div class="intro">
-    <span class="mono" style="color:var(--orange)">From the field</span>
-    <h2>Technology that works where your programmes do.</h2>
-    <p>Network cabinets in field offices, mobile data collection on tablets and phones, sync over weak signal. I've built and supported it all, far from head office.</p>
+<!-- FIELD -->
+<section class="section">
+  <div class="wrap field-grid">
+    <div class="intro reveal">
+      <span class="eyebrow">From the field</span>
+      <h2>Technology that works where your programmes do.</h2>
+      <p>Network cabinets in field offices, mobile data collection on tablets and phones, sync over weak signal. I've built and supported it all, far from head office.</p>
+    </div>
+    <figure class="reveal"><div class="ph"><img src="/images/field-cabinet.jpg" alt="A field office network cabinet with switch, router and storage" width="1000" height="561" loading="lazy"></div><figcaption>A field office network I set up</figcaption></figure>
+    <figure class="reveal"><div class="ph"><img src="/images/field-sync.jpg" alt="A phone syncing field data on a wooden table" width="1000" height="960" loading="lazy"></div><figcaption>Field data, syncing</figcaption></figure>
   </div>
-  <figure><img src="images/field-cabinet.jpg" alt="A field office network cabinet with switch, router and storage" loading="lazy"><figcaption class="mono">A field office network I set up</figcaption></figure>
-  <figure><img src="images/field-sync.jpg" alt="A phone syncing field data on a wooden table" loading="lazy"><figcaption class="mono">Field data, syncing</figcaption></figure>
 </section>
 
-<section class="train" id="training">
-  <figure><img src="images/training-kaduna.jpg" alt="Bisi Teru leading a training session in Kaduna State" loading="lazy"></figure>
-  <div class="train-t">
-    <div>
-      <span class="mono" style="color:var(--orange)">Training</span>
+<!-- TRAINING -->
+<section class="section training" id="training">
+  <div class="wrap train-grid">
+    <div class="train-photo reveal">
+      <div class="ph"><img src="/images/training-kaduna.jpg" alt="Bisi Teru leading a training session in Kaduna State" width="1600" height="1195" loading="lazy"></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Training</span>
       <h2>Your team is the first line of security.</h2>
-    </div>
-    <ul class="list">
-      <li>Security awareness for all staff</li>
-      <li>Microsoft 365 administration for IT teams</li>
-      <li>Identity &amp; access fundamentals</li>
-      <li>Delivered on site or online, in one or two days</li>
-    </ul>
-    <div class="cert">
-      <img src="images/training-india.jpg" alt="Bisi Teru at a technical training lab in India" loading="lazy">
-      <p>I still train as well as teach, including hands-on courses in India ahead of my Microsoft server and VMware certifications.</p>
+      <p class="lede">Practical, hands-on sessions built around the tools your staff use every day.</p>
+      <ul class="checks">
+        <li>Security awareness for all staff</li>
+        <li>Microsoft 365 administration for IT teams</li>
+        <li>Identity &amp; access fundamentals</li>
+        <li>On site or online, in one or two days</li>
+      </ul>
+      <div class="note">
+        <img src="/images/training-india.jpg" alt="Bisi Teru at a technical training lab in India" width="1200" height="880" loading="lazy">
+        <p>I keep learning as well as teaching, including hands-on courses in India ahead of my Microsoft server and VMware exams.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="end" id="contact">
-  <span class="mono">Start with one conversation</span>
-  <h2>Know who has access before someone else finds out.</h2>
-  <a class="btn" href="mailto:info@zoredah.com">info@zoredah.com →</a>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="ph"><img src="/images/bisi-batik.jpg" alt="Portrait of Bisi Teru" width="720" height="900" loading="lazy"></div>
+    </div>
+    <div class="about-t reveal">
+      <span class="eyebrow">About</span>
+      <blockquote>I've spent my career keeping systems running where things go wrong: field offices, power cuts, a server room on fire.</blockquote>
+      <p>I'm Bisi Teru. I started in IT in 2003 as a freelancer, then spent more than thirteen years at an international NGO, rising from support technician to ICT manager and identity &amp; access analyst.</p>
+      <p>Zoredah DataWorks is how I now bring that experience to organisations that need a senior hand, without the cost of a full-time hire.</p>
+      <div class="sig">
+        <img src="/brand/mark.svg" alt="" width="28" height="28">
+        <div><strong>Bisi Teru</strong><span>Founder &amp; Principal Consultant</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <span>© 2026 Zoredah DataWorks Limited</span>
-  <span class="mono">zoredah.com</span>
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Start with one conversation</span>
+      <h2>Know who has access before someone else finds out.</h2>
+    </div>
+    <div class="contact-card reveal">
+      <span class="mono">Email</span>
+      <a class="mail" href="mailto:info@zoredah.com?subject=Consultation%20request">info@zoredah.com</a>
+      <ol>
+        <li>Tell me briefly about your organisation</li>
+        <li>I'll reply within two working days</li>
+        <li>We book a free 30-minute call</li>
+      </ol>
+      <a class="btn" href="mailto:info@zoredah.com?subject=Consultation%20request">Request a consultation <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="/brand/logo-horizontal-white.svg" alt="Zoredah Dataworks" width="289" height="40" loading="lazy">
+        <p>Identity, access and IT advisory for NGOs and growing organisations.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#track-record">Track record</a></li>
+          <li><a href="#training">Training</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@zoredah.com">info@zoredah.com</a></li>
+          <li>Abuja, Nigeria</li>
+          <li>Working globally</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© <span id="year">2026</span> Zoredah DataWorks Limited. All rights reserved.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
 </footer>
 
+<script src="/main.js" defer></script>
 </body>
 </html>
